@@ -17,9 +17,6 @@
     "proofreading",
     "proofread"
   ],
-  "bin": {
-    "proofreader": "./bin/cmd.js"
-  },
   "scripts": {
     "test": "mocha specs --require specs/helpers/chai.js"
   },
