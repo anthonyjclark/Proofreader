@@ -1,22 +1,7 @@
 #!/usr/bin/env node
 
-//Helpers
-var path = require('path');
 var marked = require('marked');
 var Proofreader = require('../lib/proofreader.js');
-
-
-const config = {
-  "dictionaries": {
-    "build-in": ["en_US"],
-    "custom": []
-  },
-  "selectors": {
-    "whitelist": "p, li, h1, h2, h3, h4, th, td, dl, figcaption",
-    "blacklist": "pre, code"
-  }
-};
-
 
 const testInput = "\n\
 Content (the title, author, and date are automatically included)\n\
@@ -40,17 +25,7 @@ Ordered\n\
 2. Consectetur adipiscing elit\n\
 3. Integer molestie lorem at massa";
 
-
 var proofreader = new Proofreader();
-
-proofreader.setWhitelist(config.selectors.whitelist);
-proofreader.setBlacklist(config.selectors.blacklist);
-proofreader.setWriteGoodSettings(config['write-good']);
-
-config.dictionaries['build-in'].forEach(function (dictName) {
-  proofreader.addDictionary(path.join(__dirname, '../dictionaries/' + dictName + '.dic'),
-    path.join(__dirname, '../dictionaries/' + dictName + '.aff'));
-});
 
 function printResults(results) {
   results.forEach(function (result) {
