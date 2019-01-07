@@ -27,31 +27,35 @@ Ordered\n\
 
 var proofreader = new Proofreader();
 
-function printResults(results) {
+function formatResults(results) {
+
+  let prettyOutput = '';
+
   results.forEach(function (result) {
     var writeGood = result.suggestions.writeGood;
     var spelling = result.suggestions.spelling;
 
-    //Printing output
     if (writeGood.length || spelling.length) {
-      console.log(result.text);
+      prettyOutput += result.text + '\n';
 
       writeGood.forEach(function (item) {
-        console.log(' - ' + item.reason);
+        prettyOutput += ' - ' + item.reason + '\n';
       });
 
       spelling.forEach(function (item) {
-        console.log(' - "' + item.word + '" -> ' + item.suggestions);
+        prettyOutput += ' - "' + item.word + '" -> ' + item.suggestions + '\n';
       });
 
-      console.log();
+      prettyOutput += '\n';
     }
   });
+
+  return prettyOutput;
 }
 
 proofreader.proofread(marked(testInput))
   .then(function (result) {
-    printResults(result);
+    console.log(formatResults(result));
     return result;
   })
   .catch(function (error) {
