@@ -33,7 +33,6 @@
   "devDependencies": {
     "chai": "^2.0.0",
     "mocha": "^5.2.0",
-    "mock-fs": "^4.4.2",
-    "nock": "^10.0.6"
+    "mock-fs": "^4.4.2"
   }
 }

@@ -74,14 +74,11 @@ function printResults(results) {
   });
 }
 
-const lines = testInput.split('\n');
-for (const line of lines) {
-  proofreader.proofread(marked(line))
-    .then(function (result) {
-      printResults(result);
-      return result;
-    })
-    .catch(function (error) {
-      console.error('Proofreading failed', error);
-    });
-}
+proofreader.proofread(marked(testInput))
+  .then(function (result) {
+    printResults(result);
+    return result;
+  })
+  .catch(function (error) {
+    console.error('Proofreading failed', error);
+  });
