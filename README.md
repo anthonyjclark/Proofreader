@@ -1,3 +1,7 @@
+
+In this fork, I am stripping out a lot of the functionality and just using the `proofreader.js` library (i.e., I am ignoring the `cmd.js` binary and the `sourceloader.js` library).
+
+
 Proofreader [![Build Status](https://travis-ci.org/kdzwinel/Proofreader.svg)](https://travis-ci.org/kdzwinel/Proofreader) [![npm version](https://badge.fury.io/js/proofreader.svg)](http://badge.fury.io/js/proofreader)
 ===========
 

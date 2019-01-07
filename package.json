@@ -25,19 +25,15 @@
   },
   "dependencies": {
     "cheerio": "^0.22.0",
-    "cli-color": "^1.0.0",
-    "commander": "^2.5.0",
     "marked": "^0.3.18",
-    "mime": "^2.2.2",
     "nodehun": "^2.0.11",
     "nodehun-sentences": "^1.0.4",
-    "request": "^2.49.0",
     "write-good": "^0.11.3"
   },
   "devDependencies": {
     "chai": "^2.0.0",
-    "mocha": "^2.1.0",
+    "mocha": "^5.2.0",
     "mock-fs": "^4.4.2",
-    "nock": "^0.59.1"
+    "nock": "^10.0.6"
   }
 }
