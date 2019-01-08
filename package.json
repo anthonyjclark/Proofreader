@@ -35,7 +35,7 @@
   "homepage": "https://github.com/anthonyjclark/Proofreader#readme",
   "main": "index.js",
   "bin": {
-    "proofreader": "example.js"
+    "proofreader": "./bin/example.js"
   },
   "directories": {
     "lib": "lib"
