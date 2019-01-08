@@ -1,15 +1,15 @@
 {
-  "name": "proofreader",
+  "name": "@anthonyjclark/proofreader",
   "description": "Simple text proofreader based on 'write-good' (hemingway-app-like suggestions) and 'nodehun' (spelling).",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/kdzwinel/Proofreader.git"
+    "url": "git://github.com/anthonyjclark/Proofreader.git"
   },
   "bugs": {
-    "url": "http://github.com/kdzwinel/Proofreader/issues"
+    "url": "http://github.com/anthonyjclark/Proofreader/issues"
   },
-  "author": "Konrad Dzwinel <kdzwinel@gmail.com>",
+  "author": "Anthony Clark <anthonyjclark@gmail.com>",
   "license": "MIT",
   "keywords": [
     "spelling",
@@ -31,5 +31,13 @@
     "chai": "^2.0.0",
     "mocha": "^5.2.0",
     "mock-fs": "^4.4.2"
+  },
+  "homepage": "https://github.com/anthonyjclark/Proofreader#readme",
+  "main": "index.js",
+  "bin": {
+    "proofreader": "example.js"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
